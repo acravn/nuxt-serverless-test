@@ -1,0 +1,21 @@
+## AWS Buildspec file for Codebuild/Code*
+## https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
+##
+
+# THIS SHOULD BE BUILT IN THE SAME NODE VERSION + ARCHITECTURE THAT LAMBDA USES AND LOCAL USES, nodejs 18 + arm
+
+version: 0.2
+phases:
+  pre_build:
+    on-failure: ABORT
+    commands:
+      - yarn install
+  build:
+    on-failure: ABORT
+    commands:
+      # something else here to bake in sha and maybe something for datadog too?
+      - NITRO_PRESET=aws-lambda yarn build
+artifacts:
+  files:
+    - .*
+  base-directory: $SERVICE/.output
