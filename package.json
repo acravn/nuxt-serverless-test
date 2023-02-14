@@ -9,7 +9,6 @@
     "lint": "eslint --ext .js,.ts,.vue ."
   },
   "devDependencies": {
-    "@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
     "eslint": "^8.33.0",
     "eslint-plugin-vue": "^9.9.0",
     "nuxt": "3.0.0"

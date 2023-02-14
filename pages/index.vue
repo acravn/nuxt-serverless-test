@@ -1,11 +1,11 @@
 <script setup>
 useHead({
-    title: "Cartrader"
+    title: "Nuxt Test App"
 })
 </script>
 
 <template>
     <div>
-        <CarHero />
+        <h1 class="text-center text-8xl font-serif">Test 1</h1>
     </div>
 </template>
