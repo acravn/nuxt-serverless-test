@@ -32,5 +32,5 @@ artifacts:
   files:
     - '**/*'
   base-directory: .output
-  name: shn/$CODEBUILD_BUILD_NUMBER/output.zip
+  name: shn/output.zip
   
