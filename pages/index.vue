@@ -6,6 +6,6 @@ useHead({
 
 <template>
     <div>
-        <h1 class="text-center text-8xl font-serif">Test 1</h1>
+        <CarHero />
     </div>
 </template>

@@ -20,7 +20,10 @@ phases:
     commands:
       # something else here to bake in sha and maybe something for datadog too?
       - NITRO_PRESET=aws-lambda yarn build
+      
 artifacts:
   files:
-    - .*
+    - '**/*'
   base-directory: .output
+  s3-prefix: nuxt
+  
