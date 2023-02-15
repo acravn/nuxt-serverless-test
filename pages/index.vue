@@ -7,6 +7,6 @@ useHead({
 <template>
     <div>
         <!-- <CarHero /> -->
-        <h1>Test 2</h1>
+        <h1>Test 3</h1>
     </div>
 </template>

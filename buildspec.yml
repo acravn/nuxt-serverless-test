@@ -24,8 +24,6 @@ phases:
     on-failure: ABORT
     commands:
       - cd .output && zip -r ../output.zip * && cd ..
-      # - NEW_VERSION=$(aws lambda update-function-code --profile sandbox --region us-west-2 --function-name aravn-nuxt-test --zip-file fileb://./output.zip --publish --architectures arm64 --query 'Version' | tr -d '"')
-      # - aws lambda update-alias --profile sandbox --region us-west-2 --function-name aravn-nuxt-test --name aravn-nuxt-test --function-version $NEW_VERSION
       - NEW_VERSION=$(aws lambda update-function-code --function-name aravn-nuxt-test --zip-file fileb://./output.zip --publish --architectures arm64 --query 'Version' | tr -d '"')
       - aws lambda update-alias --function-name aravn-nuxt-test --name aravn-nuxt-test --function-version $NEW_VERSION
 artifacts:
