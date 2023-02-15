@@ -25,6 +25,6 @@ artifacts:
   files:
     - '**/*'
   base-directory: .output
-  s3-prefix: nuxt
-  name: builds/$CODEBUILD_BUILD_NUMBER/output.zip
+  # s3-prefix: nuxt
+  name: shn/$CODEBUILD_BUILD_NUMBER/output.zip
   
